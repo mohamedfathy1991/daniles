@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+:root {
+  --main-color: RGB(52, 52, 52);
+}
+.home {
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: linear-gradient(
+      to right,
+      rgb(32, 32, 32, 0.6),
+      rgb(49, 49, 49, 0.5)
+    ),
+    url("../imgs/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+/* ===> home section <=====*/
+.animation {
+  font-family: Montserrat, sans-serif;
+  font-size: 60px;
+  width: 450px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: typing 0.5s infinite alternate;
+  animation: identifier 2s infinite alternate;
+}
+
+@keyframes typing {
+  0% {
+    border: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes identifier {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 450px;
+  }
+}
+
+.iconss li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+/* end of home */
+
+/* start of about */
+.download:hover {
+  background-color: #fff;
+}
+.download:hover a {
+  color: black;
+}
+.contacts-buton {
+  color: black;
+}
+.contacts-buton:hover {
+  color: #fff;
+}
+/* end of about */
+/* start of services */
+.services {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.services .icon {
+  background-color: rgba(128, 128, 128, 0.1);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.services .icona i {
+  font-size: 25px;
+}
+.services .icon:hover.icon {
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* end of service */
+/* start portfolio */
+.nav-tabs {
+  border: none;
+}
+
+.nav-tabs .nav-link {
+  font-weight: bold;
+  color: black;
+  border: none;
+}
+.nav-tabs .nav-link.active {
+  position: relative;
+}
+.nav-tabs .nav-link.active::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: black;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+/* card animation */
+.portfolio-image:hover {
+  border: 5px solid rgb(202, 200, 200);
+ 
+}
+.portfolio-image:hover .portfolio-layer {
+  z-index: 3;
+}
+
+.portfolio-layer {
+  
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  background-color: white;
+}
+
+.portfolio-image:hover .portfolio-layer .text {
+  transition: all 1.5s;
+  opacity: 1 !important;
+}
+.portfolio-image:hover .text p {
+  transform: translateY(10px);
+  transition: all 1.8s;
+}
+.portfolio-image:hover .text div {
+  transition: all 1.8s;
+
+  transform: translateY(-10px);
+}
+/* end of portfolio */
+
+
+/* start of testimonials */
+.testimonials{
+  background-color: rgb(209, 207, 207,.5);
+}
+
+/* our team */
+.team{
+  background-color:rgb(209, 207, 207,.5) ;
+}
+
+.image-wraper .layer{
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  background-color: #fff;
+  z-index: -1;
+  
+}
+ .content:hover  .image-wraper img{
+
+
+transition: all .3s;
+  transform: scale(1.2);
+}
+ .content:hover  .image-wraper .layer{
+  z-index: 3;
+  transition: all .9s;
+  transform: rotateY(360deg);
+
+
+}
+
+.layer .iconss:hover i{
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+}
+
+/*
+start section contacts 
+ */
+
+ .contacts-icon{
+  width: 50px;
+  height: 50px;
+  background-color:rgb(209, 207, 207,.5) ;
+
+  
+ }
+ .contacts-icon:hover{
+  background-color: black;
+  color: white;
+ }
+
+ .forms-contents input{
+  padding: 5px;
+  border:none;
+  background-color:rgb(209, 207, 207,.5) ;
+
+ }
+ .contacts-forms textarea{
+  border:none;
+  width: 100%;
+  margin-top: 10px;
+
+  background-color:rgb(209, 207, 207,.5) ;
+  height: 200px;
+
+
+ }
+ .contacts-forms  .btn-dark:hover{
+  color: black;
+  background-color: #fff ;
+ }
+
